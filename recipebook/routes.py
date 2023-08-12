@@ -4,5 +4,6 @@ from recipebook.models import Category, Recipe
 
 @app.route("/")
 def home():
-    return render_template("base.html")
+    return render_template("recipies.html")
+
 
