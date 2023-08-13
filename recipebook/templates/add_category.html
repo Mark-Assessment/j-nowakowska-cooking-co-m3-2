@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Add Category</h3>
+
+<div class="row">
+    <form class="" method="POST" action="{{ url_for('add_category') }}">
+        <!-- category name -->
+        <div class="row">
+            <div class="input-field d-grid gap-2 col-6 mx-auto">
+                <i class="fa-solid fa-kitchen-set"></i>
+                <input id="category_name" name="category_name" minlength="5" maxlength="35" type="text" class="validate" required>
+                <label for="category_name">Category Name</label>
+            </div>
+        </div>
+        <!-- submit button -->
+        <div class="row">
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button type="submit" class="">
+                    Add Category 
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
