@@ -4,7 +4,8 @@ from recipebook.models import Category, Recipe
 
 @app.route("/")
 def home():
-    return render_template("recipies.html")
+    recipies = list(Recipe.query.order_by(Recipe.id).all())
+    return render_template("recipies.html", recipies=recipies)
 
 
 @app.route("/categories")
@@ -57,3 +58,17 @@ def add_recipe():
         db.session.commit()
         return redirect(url_for("home"))
     return render_template("add_recipe.html", categories=categories)
+
+
+@app.route("/edit_recipe/<int:recipe_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    recipe = Recipe.query.get_or_404(recipe_id)
+    categories = list(Category.query.order_by(Category.category_name).all())
+    if request.method == "POST":
+        recipe.recipe_name = request.form.get("recipe_name")
+        recipe.recipe_description = request.form.get("recipe_description")
+        recipe.recipe_method = request.form.get("recipe_method")
+        recipe.recipe_time = request.form.get("recipe_time")
+        recipe.category_id = request.form.get("category_id")
+        db.session.commit()
+    return render_template("edit_recipe.html", recipe=recipe, categories=categories)

@@ -11,4 +11,17 @@
     </div>
 </div>
 
+<div class="row">
+    {% for recipe in recipies %}
+    <div class="card" style="width: 50;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{ recipe.recipe_name }}</h5>
+        <p class="card-text">{{ recipe.time}}</p>
+        <p class="card-text">{{ recipe.description}}</p>
+        <a href="{{ url_for('edit_recipe', recipe_id=recipe.id)}}" class="btn btn-primary">Edit Recipe</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}
