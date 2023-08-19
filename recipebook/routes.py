@@ -39,3 +39,21 @@ def delete_category(category_id):
     db.session.delete(category)
     db.session.commit()
     return redirect(url_for("categories"))
+
+
+
+@app.route("/add_recipe", methods=["GET", "POST"])
+def add_recipe():
+    categories = list(Category.query.order_by(Category.category_name).all())
+    if request.method == "POST":
+        recipe = Recipe(
+            recipe_name=request.form.get("recipe_name"),
+            recipe_description=request.form.get("recipe_description"),
+            recipe_method=request.form.get("recipe_method"),
+            recipe_time=request.form.get("recipe_time"),
+            category_id=request.form.get("category_id")
+        )
+        db.session.add(recipe)
+        db.session.commit()
+        return redirect(url_for("home"))
+    return render_template("add_recipe.html", categories=categories)
