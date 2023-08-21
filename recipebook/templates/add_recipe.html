@@ -8,51 +8,43 @@
         <!-- name of the recipe  -->
         <div class="row">
             <div class="input-field d-grid gap-2 col-6 mx-auto">
-                <input id="recipe_name" name="recipe_name" minlength="3" maxlength="60" type="text" class="validate" required>
                 <label for="recipe_name">Recipe Name</label>
+                <input id="recipe_name" name="recipe_name" minlength="3" maxlength="60" type="text" class="validate" required>
             </div>
         </div>
-         <!-- description of the recipe  -->
+         <!-- Description of the recipe  -->
          <div class="row">
             <div class="input-field d-grid gap-2 col-6 mx-auto">
-                <textarea id="recipe_description" name="recipe_description" minlength="3" maxlength="1000" type="text" class="validate" required>
-                </textarea>
                 <label for="recipe_description">Recipe Description</label>
-            </div>
-        </div>
-        <!--  Ingredients -->
-        <div class="row">
-            <div class="input-field d-grid gap-2 col-6 mx-auto">
-                <textarea id="recipe_ingredients" name="recipe_ingredients" minlength="3" maxlength="1000" type="text" class="validate" required>
+                <textarea id="recipe_description" name="recipe_description" minlength="3" type="text" class="validate" required>
                 </textarea>
-                <label for="recipe_ingredients">Recipe Ingredients</label>
             </div>
         </div>
         <!--  Recipe method  -->
         <div class="row">
             <div class="input-field d-grid gap-2 col-6 mx-auto">
-                <textarea id="recipe_method" name="recipe_method" minlength="3" maxlength="1000" type="text" class="validate" required>
-                </textarea>
                 <label for="recipe_method">Recipe Method</label>
+                <textarea id="recipe_method" name="recipe_method" minlength="3" type="text" class="validate" required>
+                </textarea>
             </div>
         </div>
         <!--  Recipe time -->
         <div class="row">
             <div class="input-field d-grid gap-2 col-6 mx-auto">
-                <input id="recipe_time" name="recipe_time" type="text" class="validate" required>
                 <label for="recipe_time">Recipe Time</label>
+                <input id="recipe_time" name="recipe_time" type="text" class="validate" required>
             </div>
         </div>
         <!-- Category ID-->
         <div class="row">
             <div class="input-field d-grid gap-2 col-6 mx-auto">
+                <label for="category_id">Category</label>
                 <select id="category_id" name="category_id" class="validate" class="form-select" aria-label="Default select example" required>
                     <option selected value="" disabled>Choose Category</option>
                     {% for category in categories %}
                         <option value="{{ category.id }}">{{ category.category_name }}</option>
                     {% endfor %}
                 </select>
-                <label for="category_id">Category</label>
             </div>
         </div>
         <!-- the submit button -->

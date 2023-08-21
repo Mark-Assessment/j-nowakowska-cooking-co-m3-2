@@ -71,6 +71,7 @@ def edit_recipe(recipe_id):
         recipe.recipe_time = request.form.get("recipe_time")
         recipe.category_id = request.form.get("category_id")
         db.session.commit()
+        return redirect(url_for("home"))
     return render_template("edit_recipe.html", recipe=recipe, categories=categories)
 
 
@@ -81,3 +82,11 @@ def delete_recipe(recipe_id):
     db.session.delete(recipe)
     db.session.commit()
     return redirect(url_for("home"))
+
+
+
+'''
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    
+'''
