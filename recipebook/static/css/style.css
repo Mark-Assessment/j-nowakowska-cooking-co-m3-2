@@ -28,3 +28,26 @@ main{
     background-color: var(--green);
     padding: 10vh;
 }
+
+
+footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+footer>a {
+    font-size: 20px;
+    color: #f96d00;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+
+footer>p {
+    color: #000000;
+    font-family: 'Marcellus', serif, sans-serif;
+    padding: 10px;
+}
