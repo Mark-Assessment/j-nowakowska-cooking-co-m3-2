@@ -24,15 +24,26 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{{ url_for('home')}}">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('add_recipe') }}">Add a Recipe</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('categories')}}">Categories</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('login')}}">Log In</a>
-              </li>
+              {% if session.user %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('add_recipe') }}">Add a Recipe</a>
+                </li>
+                {% if session.user|lower == "admin"|lower %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('categories')}}">Categories</a>
+                </li>
+                {% endif %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('signout')}}">Sign Out</a>
+                </li>
+              {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('signin')}}">Sign In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('signup')}}">Sign Up</a>
+                </li>
+              {% endif %}
             </ul>
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -43,7 +54,13 @@
     </nav>
   </header>
 
-  
+  <main class="container nav-img">
+    <img src="https://blog.yelp.com/wp-content/uploads/2020/05/Photo-by-Jason-Briscoe-scaled.jpg" class="img-fluid" alt="...">
+    {% block content %}
+
+    {% endblock %}
+
+</main>
 
    <!-------Footer------>
    <footer>

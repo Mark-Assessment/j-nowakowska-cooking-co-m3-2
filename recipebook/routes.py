@@ -7,10 +7,6 @@ def home():
     recipies = list(Recipe.query.order_by(Recipe.id).all())
     return render_template("recipies.html", recipies=recipies)
 
-@app.route("/")
-def index():
-    return render_template("index.html")
-
 
 @app.route("/categories")
 def categories():
@@ -88,49 +84,76 @@ def delete_recipe(recipe_id):
     return redirect(url_for("home"))
 
 
-@app.route("/register", methods=["GET", "POST"])
-def register():
-    if user.is_authenticated:
-        return redirect(url_for("home"))
-    form= RegistrationForm()
-    if form.validate_on_submit():
-        hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
-        user = User(username=form.username.data, email=form.email.data, password=hashed_password)
+
+@app.route("/signup", methods=["GET", "POST"])
+def signup():
+    if request.method == "POST":
+        # check if username already exists in db
+        existing_user = Users.query.filter(Users.user_name == \
+                                           request.form.get("username").lower()).all()
+        
+        if existing_user:
+            flash("Username already exists")
+            return redirect(url_for("signup"))
+        
+        user = Users(
+            user_name=request.form.get("username").lower(),
+            password=generate_password_hash(request.form.get("password"))
+        )
+        
         db.session.add(user)
         db.session.commit()
-        flash("Your account has been created. You can log in now.")
-        return redirect(url_for('login'))
-    return render_template('register.html', title='Register', form=form)
+
+        # put the new user into 'session' cookie
+        session["user"] = request.form.get("username").lower()
+        flash("Registration Successful!")
+        return redirect(url_for("profile", username=session["user"]))
+
+    return render_template("signup.html")
 
 
-@app.route("/login", methods=["GET", "POST"])
-def login():
-    if user.is_authenticated:
-        return redirect(url_for('home'))
-    form= LoginForm()
-    if form.validate_on_submit():
-        user = User.query.filter_by(email=form.email.data).first()
-        if user and bcrypt.check_password_hash(user.password, form.password.data):
-            login_user(user, remember=form.remember.data)
-            next_page = request.args.get('next')
-            return redirect(next_page) if  next_page else redirect(url_for('home'))
+@app.route("/signin", methods=["GET", "POST"])
+def signin():
+    if request.method == "POST":
+        # check if username exists in db
+        existing_user = Users.query.filter(Users.user_name == \
+                                           request.form.get("username").lower()).all()
+
+        if existing_user:
+            print(request.form.get("username"))
+            # ensure hashed password matches user input
+            if check_password_hash(
+                    existing_user[0].password, request.form.get("password")):
+                        session["user"] = request.form.get("username").lower()
+                        flash("Welcome, {}".format(
+                            request.form.get("username")))
+                        return redirect(url_for(
+                            "profile", username=session["user"]))
+            else:
+                # invalid password match
+                flash("Incorrect Username and/or Password")
+                return redirect(url_for("signin"))
+
         else:
-            flash("Wrong login or password. You cannot be logged in")
-    return render_template('login.html', title='Login', form=form)
+            # username doesn't exist
+            flash("Incorrect Username and/or Password")
+            return redirect(url_for("signin"))
 
-@app.route("/logout")
-def logout():
-    logout_user()
-    return redirect(url_for('home'))     
+    return render_template("signin.html")
 
-"""     if request.method == "POST":
-            existing_user = Login(username = request.form.get("username"))
-            if existing_user:
-                if check_password_hash(
-                    existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username")
-                    flash ("Welcome back,{}")
-        db.session.add(login)
-        db.session.commit()
-        return redirect(url_for("login"))
-    return render_template("login.html")"""
+
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+        
+    if "user" in session:
+        return render_template("profile.html", username=session["user"])
+
+    return redirect(url_for("signin"))
+
+
+@app.route("/signout")
+def signout():
+    # remove user from session cookie
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("signin"))
