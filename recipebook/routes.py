@@ -7,6 +7,10 @@ def home():
     recipies = list(Recipe.query.order_by(Recipe.id).all())
     return render_template("recipies.html", recipies=recipies)
 
+@app.route("/")
+def index():
+    return render_template("index.html")
+
 
 @app.route("/categories")
 def categories():
@@ -117,13 +121,9 @@ def login():
 @app.route("/logout")
 def logout():
     logout_user()
-    return redirect(url_for('home'))      
-        
-        
-        
-        
-        """
-        if request.method == "POST":
+    return redirect(url_for('home'))     
+
+"""     if request.method == "POST":
             existing_user = Login(username = request.form.get("username"))
             if existing_user:
                 if check_password_hash(
@@ -133,5 +133,4 @@ def logout():
         db.session.add(login)
         db.session.commit()
         return redirect(url_for("login"))
-    return render_template("login.html")
-    """
+    return render_template("login.html")"""
