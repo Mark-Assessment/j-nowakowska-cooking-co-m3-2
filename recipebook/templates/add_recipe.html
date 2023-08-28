@@ -35,6 +35,21 @@
                 <input id="recipe_time" name="recipe_time" type="text" class="validate" required>
             </div>
         </div>
+        <div class="row">
+            <div class="input-field d-grid gap-2 col-6 mx-auto">
+                <label for="recipe-image" class="form-label">
+                 Recipe's Image (Url / Image's address)
+                </label>
+                <input type="text" id="recipe-image" class="form-control image-url" 
+                name="recipe_image" value="">
+            </div>
+        </div>
+        <!-- Rendering image from url -->
+        <div class="row">
+            <img class="show-image" alt="display the image" 
+                onerror="this.src='../../static/images/recipe-placeholder.png';"
+                src="{{ url_for('static', filename='images/recipe-placeholder.png') }}">
+        </div>
         <!-- Category ID-->
         <div class="row">
             <div class="input-field d-grid gap-2 col-6 mx-auto">

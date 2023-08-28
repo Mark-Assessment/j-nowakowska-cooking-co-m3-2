@@ -27,7 +27,7 @@ main{
 }
 
 .navbar {
-    background-color: var(--blue);
+    background-color: #407088;
     padding: 10vh;
 }
 
@@ -54,12 +54,6 @@ footer>p {
     padding: 10px;
 }
 
-
-.active {
-    background-color: #f96d00;
-    opacity: 0.7;
-    border-radius: 5px;
-}
 
 h3 {
     padding: 10%;

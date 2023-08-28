@@ -85,7 +85,6 @@ def delete_recipe(recipe_id):
     return redirect(url_for("home"))
 
 
-
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
     if request.method == "POST":
@@ -158,3 +157,12 @@ def signout():
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("signin"))
+
+
+@app.route("/view_recipe/<int:recipe_id>")
+def recipe(recipe_id):
+    recipe = Recipe.query.get_or_404(recipe_id)
+    categories = list(Category.query.order_by(Category.category_name).all())
+    return render_template("recipe")
+
+
