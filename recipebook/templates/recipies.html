@@ -4,11 +4,13 @@
 <h3>Recipes</h3>
 
 <div class="row">
+    {% if session.user %}
     <div class="d-grid gap-2 col-6 mx-auto">
         <a href="{{ url_for('add_recipe') }}" class="btn btn-primary" role="button">
             Add Recipe
         </a>
     </div>
+    {% endif %}
 </div>
 
 <div class="row">
@@ -20,8 +22,10 @@
                 <h5 class="card-title">{{ recipe.recipe_name }}</h5>
                 <p class="card-text">{{ recipe.recipe_time }}</p>
                 <p class="card-text">{{ recipe.recipe_description }}</p>
+                {% if session.user %}
                 <a href="{{ url_for('edit_recipe', recipe_id=recipe.id)}}" class="btn btn-primary">Edit Recipe</a>
                 <a href="#modal-{{ recipe.id }}" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-{{ recipe.id }}">Delete</a>
+                {% endif %}
         </div>
         <div id="modal-{{ recipe.id }}" class="modal">
             <div class="modal-content">
