@@ -10,13 +10,13 @@ class Category(db.Model):
 
 
 
-
 class Recipe(db.Model):
     id= db.Column(db.Integer, primary_key=True)
     recipe_name = db.Column(db.String(60), unique=True, nullable=False)
     recipe_description = db.Column(db.Text, nullable=False)
     recipe_method = db.Column(db.Text, nullable=False)
     recipe_time = db.Column(db.Time, nullable=False)
+    recipe_image = db.Column(db.Text, nullable=False)
     category_id = db.Column(db.Integer, db.ForeignKey("category.id", ondelete="CASCADE"), nullable=False)
 
 

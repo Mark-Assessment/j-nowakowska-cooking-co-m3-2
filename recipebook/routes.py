@@ -53,6 +53,7 @@ def add_recipe():
             recipe_description=request.form.get("recipe_description"),
             recipe_method=request.form.get("recipe_method"),
             recipe_time=request.form.get("recipe_time"),
+            recipe_image=request.form.get("recipe_image"),
             category_id=request.form.get("category_id")
         )
         db.session.add(recipe)
@@ -70,6 +71,7 @@ def edit_recipe(recipe_id):
         recipe.recipe_description = request.form.get("recipe_description")
         recipe.recipe_method = request.form.get("recipe_method")
         recipe.recipe_time = request.form.get("recipe_time")
+        recipe_image = request.form.get("recipe_image")
         recipe.category_id = request.form.get("category_id")
         db.session.commit()
         return redirect(url_for("home"))
@@ -159,10 +161,10 @@ def signout():
     return redirect(url_for("signin"))
 
 
-@app.route("/view_recipe/<int:recipe_id>")
+"""@app.route("/view_recipe/<int:recipe_id>")
 def recipe(recipe_id):
     recipe = Recipe.query.get_or_404(recipe_id)
     categories = list(Category.query.order_by(Category.category_name).all())
-    return render_template("recipe")
+    return render_template("recipe")"""
 
 
