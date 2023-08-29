@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block header %}
+
+    <!-- Page Title -->
+    <h2>{{ recipe.recipe_name }}</h2>
+
+{% endblock %}
+
+{% block content %}
+<div class="card">
+    <img src="{{ recipe.recipe_image }}" class="card-img-top" alt="{{ recipe.recipe_name }}">
+    <div class="card-body">
+      <h5 class="card-title">{{ recipe.recipe_name }}</h5>
+      <p class="card-text">Get, Ready, Cook!</p>
+    </div>
+    <div class="row mt-3 pt-3 mx-3 mx-sm-5 mx-lg-0">
+        <div class="col-6">
+            <p>{{ recipe.recipe_time }}</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-12 col-lg-8">
+    <div class="ms-lg-4 p-3 p-md-4">
+        <p class="card-text">{{ recipe.recipe_description }}</p>
+    </div>
+    <div>
+        <p>{{ recipe.recipe_method }}</p>
+    </div>
+    <div>
+        <p> {{recipe.category_id}}</p>
+    </div>
+
+</div>
+
+{% endblock %}

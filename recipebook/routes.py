@@ -161,10 +161,7 @@ def signout():
     return redirect(url_for("signin"))
 
 
-"""@app.route("/view_recipe/<int:recipe_id>")
-def recipe(recipe_id):
+@app.route("/view_recipe/<int:recipe_id>", methods=["GET"])
+def view_recipe(recipe_id):
     recipe = Recipe.query.get_or_404(recipe_id)
-    categories = list(Category.query.order_by(Category.category_name).all())
-    return render_template("recipe")"""
-
-
+    return render_template("view_recipe.html", recipe=recipe)
