@@ -1,5 +1,5 @@
 :root {
-    --text: #332925;
+    --text: #020202;
     --blue: #bbf2ed;
     --purple: #8985b0;
     --pink: #e7c8e0;
@@ -29,6 +29,7 @@ main{
 .navbar {
     background-color: #407088;
     padding: 10vh;
+
 }
 
 
@@ -57,6 +58,8 @@ footer>p {
 
 h3 {
     padding: 10%;
+    position: relative;
+    text-align: center;
 }
 
 .signin {
@@ -64,5 +67,28 @@ h3 {
 }
 
 
+.btn {
+    background-color:#f96d00;
+    border-color: #000000;
+}
 
+.btn:hover {
+    background-color: #f1ecc9;
+    color: #020202;
+}
 
+.add-category{
+    margin: 20px;
+}
+
+.delete{
+    background-color: #A31300;
+}
+
+.edit{
+    background-color: darkgreen;
+}
+
+.view{
+    background-color: #bbf2ed;
+}

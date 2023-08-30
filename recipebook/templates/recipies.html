@@ -23,9 +23,9 @@
                 <p class="card-text">{{ recipe.recipe_time }}</p>
                 <p class="card-text">{{ recipe.recipe_description }}</p>
                 {% if session.user %}
-                <a href="{{ url_for('edit_recipe', recipe_id=recipe.id)}}" class="btn btn-primary">Edit Recipe</a>
-                <a href="{{ url_for('view_recipe', recipe_id=recipe.id)}}" class="btn btn-primary">View Recipe</a>
-                <a href="#modal-{{ recipe.id }}" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-{{ recipe.id }}">Delete</a>
+                <a href="{{ url_for('edit_recipe', recipe_id=recipe.id)}}" class="btn btn-primary edit">Edit Recipe</a>
+                <a href="{{ url_for('view_recipe', recipe_id=recipe.id)}}" class="btn btn-primary view">View Recipe</a>
+                <a href="#modal-{{ recipe.id }}" class="btn btn-primary delete" data-bs-toggle="modal" data-bs-target="#modal-{{ recipe.id }}">Delete</a>
                 {% endif %}
         </div>
         <div id="modal-{{ recipe.id }}" class="modal">

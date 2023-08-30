@@ -165,3 +165,9 @@ def signout():
 def view_recipe(recipe_id):
     recipe = Recipe.query.get_or_404(recipe_id)
     return render_template("view_recipe.html", recipe=recipe)
+
+
+"""@app.route("/user")
+def users():
+    users = list(Category.query.order_by(Category.category_name).all())
+    return render_template("categories.html", categories=categories)"""
