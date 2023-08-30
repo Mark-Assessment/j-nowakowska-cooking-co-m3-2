@@ -18,6 +18,7 @@ class Recipe(db.Model):
     recipe_time = db.Column(db.Time, nullable=False)
     recipe_image = db.Column(db.Text, nullable=False)
     category_id = db.Column(db.Integer, db.ForeignKey("category.id", ondelete="CASCADE"), nullable=False)
+    users_id = db.Column(db.Integer, db.ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
 
 
 
@@ -29,6 +30,7 @@ class Users(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_name = db.Column(db.String(50), unique=True, nullable=False)
     password = db.Column(db.String(260), nullable=False)
+    recipe = db.relationship("Recipe", backref="users", cascade="all, delete", lazy=True)
 
     def __repr__(self):
         return self.user_name
