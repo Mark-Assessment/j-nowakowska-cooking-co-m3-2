@@ -166,8 +166,7 @@ def view_recipe(recipe_id):
     recipe = Recipe.query.get_or_404(recipe_id)
     return render_template("view_recipe.html", recipe=recipe)
 
-
-"""@app.route("/user")
-def users():
-    users = list(Category.query.order_by(Category.category_name).all())
-    return render_template("categories.html", categories=categories)"""
+@app.route("/view_category/<int:category_id>", methods=["GET"])
+def view_category(category_id):
+    category = Category.query.get_or_404(category_id)
+    return render_template("view_category.html", categories=categories)
