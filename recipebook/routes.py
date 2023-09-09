@@ -51,6 +51,7 @@ def add_recipe():
         recipe = Recipe(
             recipe_name=request.form.get("recipe_name"),
             recipe_description=request.form.get("recipe_description"),
+            recipe_ingredients=request.form.get("recipe_ingredients"),
             recipe_method=request.form.get("recipe_method"),
             recipe_time=request.form.get("recipe_time"),
             recipe_image=request.form.get("recipe_image"),
@@ -69,6 +70,7 @@ def edit_recipe(recipe_id):
     if request.method == "POST":
         recipe.recipe_name = request.form.get("recipe_name")
         recipe.recipe_description = request.form.get("recipe_description")
+        recipe.recipe_ingredients = request.form.get("recipe_ingredients")
         recipe.recipe_method = request.form.get("recipe_method")
         recipe.recipe_time = request.form.get("recipe_time")
         recipe_image = request.form.get("recipe_image")
