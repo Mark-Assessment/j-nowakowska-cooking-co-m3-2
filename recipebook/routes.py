@@ -33,9 +33,13 @@ def add_category():
 def edit_category(category_id):
     category = Category.query.get_or_404(category_id)
     if request.method == "POST":
-        category.category_name = request.form.get("category_name")
-        db.session.commit()
-        return redirect(url_for("categories"))
+        exists = list(Category.query.filter_by(category_name=request.form.get("category_name", '')))
+        if len(exists) > 0:
+            flash("This Categeory name already exists")
+        else:
+            category.category_name = request.form.get("category_name")
+            db.session.commit()
+            return redirect(url_for("categories"))
     return render_template("edit_category.html", category=category)
 
 
@@ -61,9 +65,13 @@ def add_recipe():
             recipe_image=request.form.get("recipe_image"),
             category_id=request.form.get("category_id")
         )
-        db.session.add(recipe)
-        db.session.commit()
-        return redirect(url_for("home"))
+        exists = list(Recipe.query.filter_by(recipe_name=request.form.get("recipe_name", '')))
+        if len(exists) > 0:
+            flash("This Categeory name already exists")
+        else:
+            db.session.add(recipe)
+            db.session.commit()
+            return redirect(url_for("home"))
     return render_template("add_recipe.html", categories=categories)
 
 
