@@ -81,6 +81,11 @@ h3 {
 
 .card-img-top {
     width: 100%;
-    height: 15vw;
+    height: 20vw;
     object-fit: cover;
+    padding: 5 5; 
+}
+
+.text-view {
+    text-align: center;
 }

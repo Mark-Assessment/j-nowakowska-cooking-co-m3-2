@@ -15,27 +15,21 @@
          <!-- description of the recipe  -->
          <div class="row">
             <div class="input-field d-grid gap-2 col-6 mx-auto">
-                <textarea id="recipe_description" name="recipe_description" minlength="3" maxlength="1000" type="text" class="validate" required>
-                    {{- recipe.recipe_description -}}
-                </textarea>
+                <textarea id="recipe_description" name="recipe_description" minlength="3" maxlength="1000" type="text" class="validate" required>{{ recipe.recipe_description }}</textarea>
                 <label for="recipe_description">Recipe Description</label>
             </div>
         </div>
         <!-- ingredients for the recipe  -->
         <div class="row">
             <div class="input-field d-grid gap-2 col-6 mx-auto">
-                <textarea id="recipe_ingredients" name="recipe_ingredients" minlength="3" maxlength="1000" type="text" class="validate" required>
-                    {{- recipe.recipe_ingredients -}}
-                </textarea>
+                <textarea id="recipe_ingredients" name="recipe_ingredients" minlength="3" maxlength="1000" type="text" class="validate" required>{{ recipe.recipe_ingredients }}</textarea>
                 <label for="recipe_ingredients">Recipe Ingredients</label>
             </div>
         </div>
         <!--  Recipe method  -->
         <div class="row">
             <div class="input-field d-grid gap-2 col-6 mx-auto">
-                <textarea id="recipe_method" name="recipe_method" minlength="3" maxlength="1000" type="text" class="validate" required>
-                    {{ -recipe.recipe_method- }}
-                </textarea>
+                <textarea id="recipe_method" name="recipe_method" minlength="3" maxlength="1000" type="text" class="validate" required>{{ recipe.recipe_method }}</textarea>
                 <label for="recipe_method">Recipe Method</label>
             </div>
         </div>
