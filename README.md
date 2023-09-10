@@ -114,3 +114,276 @@ The website needs to enable the **site manager** to:
 
 - View the recipes added by different users
 - Improve the site as necessary with various new features
+
+#### Scope
+
+The scope plane is about defining requirements based on the goals established on the strategy plane. Using the information in the strategy plane, the identified required features have been broken into the following two categories.
+
+- Content Requirements:
+  - The user will be looking for:
+	 - Recipes that can be viewed on the main page
+	- Visible button
+	 - Intuitive navigation bar
+	- Social Media links for those with further interest in cooking/looking for recipes
+   	- View Categories 
+	- Functionality Requirements
+  - The user will be able to:
+    - Log in/ Register/ Log out of the website 
+    - Be able to easily navigate the site to find the information they require, like social media links etc
+    - Add/edit/delete recipes to a category
+    - Add /edit/delete recipes
+
+#### Structure
+
+The information above was organized in a hierarchical tree structure, showing how users can navigate through the interactive site with ease and efficiency, with the following results:
+
+<details>
+
+<summary>Structure of the Site</summary>
+
+<p>
+  <img src="" width="100%" alt="structure photos">
+</p>
+
+</details>
+
+
+The structure of the models and database is included below :
+<summary>Structure of the Database</summary>
+
+<p>
+  <img src="" width="100%" alt="structure photos">
+</p>
+
+</details>
+
+### Skeleton
+
+Wireframes were made to showcase the appearance of the site pages while keeping a positive user experience in mind. The wireframes were created using an online version of [Figma](https://www.figma.com).
+
+<p>
+    <img src="" width="100%" alt="">
+    <img src="" width="100%" alt="">
+    <img src="" width="100%" alt="">
+</p>
+
+</details>
+
+
+### Design
+
+#### Colour Scheme
+
+I have chosen my colour scheme by using [SheCodes](https://palettes.shecodes.io/) colour scheme palettes.
+The colours used are :
+  
+#f6e4ad - soft yellow for background;
+#000000 - black for text;
+#eb2632 - red for footer links;
+#f96d00 - orange button background colors;
+#f1ecc9 - pale green for button hover background colour;
+#A31300 - red for delete button;
+#darkgreen - green  for the edit button
+#bbf2ed -  light blue for view button;
+
+The soft yellow was used as the background colour for the website.  
+The main content text is in a black shade, as this colour creates the best contrast to guarantee the high readability of the text. Following the standard procedure, the delete buttons are red; the edit buttons are green and the view buttons are yellow.
+Shades picked are generally soft with a few contrasting colours like red, orange and green.
+The colours are there to represent versatile colours of fruit and vegetables used in recipes.
+
+#### Typography
+
+The typography pairing used on this site is [Montserrat]. A backup of Sans-Serif had been applied in case of an error.
+
+#### Imagery
+
+The selected imagery has been sourced from various sites. 
+There is an image on the main page that also shows on other pages. A user can also use any URL of an image to include this in their recipe page.
+Categories have a default image included in the images folder.
+
+## Features
+
+### Design Features
+
+Each page within the site has a responsive and consistent navigation system. Detailed features are included below.
+
+- The **Header** is across the top of the page. It is 100% in width and includes the title of the page.
+- The **Navigation Bar** is positioned on the right-hand side of the title, it includes the "Home", "Sign In" and "Sign up" buttons.
+After the user verification the navigation bar changes and buttons like "Add Recipe", "Category, "Add Category" appear instead of "Sign in" and "Sign up". 
+It appears on all screen sizes. If the screen size becomes too small the menu will become collapsable with a button for access.
+- The **Footer** is 100% in width. The footer is located permanently at the bottom of the page on all screen sizes. The footer contains all social media links and corresponding media logos and a copywrite text at the bottom of the footer.
+
+<dl>
+    <dt><a href="recipies.html" target="_blank" alt="Julia's Cookbook Home Page">Home Page</a></dt>
+    <dd>
+        The <em>Home Page</em> is a scrollable page and it includes a navigation bar, all recipes that were added to the website; buttons for deleting/editing and viewing recipes; and a description of the site.
+        <ul>
+            <li>
+            <em>Recipes</em> - This is main focus on the page.
+            </li>
+            <li>
+            <em>Buttons</em> - This page includes Add/Delete/Edit and View buttons that allow users to utilise CRUD functionality. 
+            </li>
+            <li>
+            <em>The Description</em> - This section contains a short description of the page and its purpose. This will give a clear overview of the website for a new user.
+            </li>
+	     <li>
+            <em>Footer</em> - This section contains social media links to Facebook, Gitpod and Twitter.
+            </li>
+        </ul>
+    </dd>
+</dl>
+<dl>
+    <dt><a href="categories.html" target="_blank alt=" Categories page">Categories Page</a></dt>
+    <dd>
+        The <em>Categories</em> is a scrollable page that includes cards with categories. It consists of an image and category name; The cards also have a button to edit and delete categories 
+        <ul>
+            <li>
+            <em>Title</em> - this reflect the sites purpose.
+            </li>
+            <li>
+            <em>Main Content</em> - cards with categories
+            </li>
+            <li>
+            <em>Footer</em> - This section contains social media links to Facebook, Gitpod and Twitter.
+            </li>
+        </ul>
+    </dd>
+</dl>
+
+### Existing Features
+
+- **Header** - Appears on every page; This includes the title of the page and a graphic that carries the theme of the website.
+- **Navigation Bar** - Appears on every page to provide visible and easily accessible navigation.
+- **Footer** - Appears on the bottom of every page. This provides easy access to external links.
+- **Social Media Links** - Appears in the footer, at the bottom of every page. Links are embedded in the social media icons and open in a new tab to provide a better user experience.
+- **Recipe card field** - Appears at the epicentre of the Recipies/Home page. It consists of cards with recipe information and buttons for viewing/editing/ deleting and adding recipes. 
+- **Add recipe** - The "Add recipe" button is there to allow users to add recipes. After clicking it will take the user to a form for adding a recipe. The recipe will then appear on the main page and the user will be redirected there after clicking "Submit".
+- **Social Media Links** - Social media links will open a new tab with a chosen site, as per the logo.
+
+### Features To Implement In The Future
+
+- **Favourites section**
+  - **Feature** - Create a feature where users can add recipes to favourites after logging in.
+  - **Reasons For The Feature Not Being Currently Included** - not a sufficient amount of time to execute this on a desired level as well as more coding practice required.
+- **Recipes edit/delete features only available for users who created a given recipe**
+  - **Feature** - The user will only be able to edit and delete the recipes they added themselves. Everyone will still be able to view recipes as long as they are logged in.
+  - **Reasons For The Feature Not Being Currently Included** - not a sufficient amount of time to execute this on a desired level;
+- **Reviewing Recipes**
+  - **Feature** - Create a function where users can review recipes and add comments under them.
+  - **Reasons For The Feature Not Being Currently Included** - not a sufficient amount of time to execute this on a desired level. More practice and expertise in coding is needed.
+- **Videos**
+  - **Feature** - Create a feature where videos can also be uploaded with recipe instructions alongside the written instructions.
+  - **Reasons For The Feature Not Being Currently Included** - not a sufficient amount of time to execute this on a desired level.
+
+## Issues and Bugs
+
+The developer ran into several issues during the development of this site. The most interesting ones have been described below, this includes the fix for the bug.
+
+**Adding images to page** - A bug was detected whilst the developer was testing the site and tried to add images. The models for the database needed to be changed but the website came up with few errors. Eventually, with the help of a tutor, the developer managed to update the data models correctly whilst adding the it to run.py file as well. 
+
+
+**View Categories** - 
+
+**Delete button** - Upon creating the delete button the developer realised that it did not trigger the desired behaviour. The button was supposed to warn the user before actually deleting a record but it didn't. The developer had to add a modal which then was included in the functionality of the button. 
+
+## Technologies Used
+
+### Main Languages Used
+
+- HTML5
+- CSS3
+-JavaScript
+- Python
+- Bootstrap
+- SQL 
+
+### Frameworks, Libraries & Programs Used
+
+[GitHub](https://github.com/ "Link to Github") - was used to store the project after pushing from Codeanywhere.
+[Codeanywhere](https://codeanywhere.com/signin"Link to Codeanywhere") - was used to write and commit the code as well as push it to GitHub.
+[Font Awesome](https://fontawesome.com/ "Link to Font Awesome") - was used to obtain icons for the project.
+[Figma](https://www.figma.com/ "Link to Figma") - was used to create Wireframes.
+[Google Fonts](https://fonts.google.com/ "Link to Google fonts")- was used to source fonts for the project.
+[Canva](https://www.canva.com/ "Link to Canva") - was used to create graphics for the project.
+[Am I Responsive?](https://ui.dev/amiresponsive "Link to Am I Responsive?") - was utilised to check if the site is responsive.
+[Heroku](https://heroku.com/ "Link to Heroku") - was used to deploy the website.
+[Favicon](https://favicon.io/ "Link to Favicon") - was used to create a logo for the business and browser tab.
+
+
+## Deployment
+
+ This milestone project was developed using [Codeanywhere](https://codeanywhere.com/signin "Link to Codeanywhere site"), which was then committed and pushed to GitHub using the Codeanywhere terminals.
+
+### Deploying on Heroku
+
+There are two ways to deploy on Heroku:
+Using the Heroku Command Line Interface, or
+Connect to GitHub Repository.
+I did the second method as it's the simpler way to deploy to Heroku. The steps are as follows.
+Set Up A New Heroku App
+Navigate to Heroku.com, create a new account or log in if you already have an account.
+On the dashboard page, click the "Create New App" button.
+Give the app a name, the name must be unique with hyphens between words.
+Set the region closest to you, and click "Create App".
+Create A Requirements.txt file
+A requirements.txt file contains a list of the Python dependencies that our project needs to run successfully. It's how Heroku can detect what language we're using. Here are the steps to create a requirements.txt file:
+Create a requirements.txt file by typing in the terminal:
+pipi3 freeze --local > requirements.txt
+Add, commit, and push the file:
+git add -A
+git commit -m "Add requirements.txt" 
+git push
+
+Create A Procfile file
+A procfile is a special kind of file that tells Heroku how to run our project.
+In the terminal, type:
+echo web: python run.py > Procfile
+This command tells Heroku that it's going to be a web process, and the command to run our application is "python run.py", which is the name of the python file that we've created.
+Add, commit, and push the file:
+git add -A
+git commit -m "Add Procfile" 
+git push
+
+Connect Our App to Github
+In Heroku app dashboard, navigate to the Deploy page. On the Deployment Method, click "Github".
+Click on "Connect to Github" button.
+Fill in the name of your Github repository name and click on "Search".
+After it found the correct repository, click on "Connect".
+Set Up The Environment Variables in Heroku
+Since we've contained our environment variables within a hidden file env.py, Heroku won't be able to read those variables. We can securely tell Heroku which variables are required.
+Go back to Heroku dashboard of your flask app, navigate to the "Settings" page.
+Click on "Reveal Config Vars" button, add environment variables in a key-value pairs as below:KeyValue
+IP	0.0.0.0
+PORT	5000
+SECRET_KEY	<your_secret_key>
+MONGO_URI	mongodb+srv://<username>:<password>@<cluster_name>-ocous.mongodb.net/<database_name>?retryWrites=true&w=majority
+MONGO_DBNAME	<database_name>
+Enable The Automatic Deployment
+On "Automatic Deploys" section, from our master/main branch click on "Enable Automatic Deployment".
+On "Manual deploy" section, from our master/main click on "Deploy Branch".
+Heroku will now receive the code from Github and start building the app using our required packages. Once it's done, you'll see a notification "Your app was successfully deployed." The deployed version can now be viewed by selecting View App.
+eroku
+
+## Credits
+
+### Content
+
+- Text used in the project was borrowed and adapted from various cooking websites.
+
+### Code
+
+- Multiple websites were consulted and visited whilst developing this project to better understand the code that is being used and utilise the developer's knowledge gained so far. Pages used for reference are included below :
+  - [W3Schools](https://www.w3schools.com/ "Link to W3Schools page")
+  - [Stack Overflow](https://stackoverflow.com/ "Link to Stack Overflow")
+- Any borrowed code is mentioned and acknowledged in the notes in the Gitpod
+
+### Media
+
+- Various platforms and pages were used for sourcing images included in this project, the main page used was [Google Images](https://www.google.com/imghp?hl=EN "Link to Google Images Page")
+
+## Acknowledgements
+
+- I would like to thank my mentor Owonikoko Oluwaseun for useful advice and guidabce on this project.
+- I would also like to thank the coders' community who created various documents explaining how Python and SQL work, so I could use that as a base to create my own, unique project.
+- I would like to thank my family and friends for their objective feedback and support.
