@@ -180,8 +180,3 @@ def view_recipe(recipe_id):
     recipe = Recipe.query.get_or_404(recipe_id)
     return render_template("view_recipe.html", recipe=recipe)
 
-@app.route("/view_category/<int:category_id>", methods=["GET"])
-def view_category(category_id):
-    if request.method == "GET":
-        category.category_name = request.form.get("category_name")
-    return render_template("view_category.html", categories=categories)

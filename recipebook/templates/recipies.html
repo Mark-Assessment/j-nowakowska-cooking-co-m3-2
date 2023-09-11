@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3>Recipes</h3>
+<h1>Recipes</h1>
 
 <div class="row">
     {% if session.user %}
     <div class="d-grid gap-2 col-6 mx-auto">
-        <a href="{{ url_for('add_recipe') }}" class="btn btn-primary" role="button">
+        <a href="{{ url_for('add_recipe') }}" class="btn btn-primary add" role="button">
             Add Recipe
         </a>
     </div>

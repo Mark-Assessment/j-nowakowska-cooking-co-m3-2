@@ -5,7 +5,7 @@ body{
     flex-direction: column;
     color: #000000;
     background-color: #f6e4ad;
-    font-family: 'Montserrat', sans-serif;; 
+    font-family: 'Montserrat', sans-serif; 
 }
 
 main{
@@ -48,6 +48,12 @@ h3 {
     text-align: center;
 }
 
+h1 {
+    padding: 10%;
+    position: relative;
+    text-align: center;
+}
+
 .signin {
     padding: 3%;
 }
@@ -76,7 +82,8 @@ h3 {
 }
 
 .view{
-    background-color: #bbf2ed;
+    background-color: #EEDC82;
+    color: black;
 }
 
 .card-img-top {
@@ -88,4 +95,8 @@ h3 {
 
 .text-view {
     text-align: center;
+}
+
+.add {
+    margin-bottom: 15% ;
 }
