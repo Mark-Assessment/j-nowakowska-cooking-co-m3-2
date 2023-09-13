@@ -2,14 +2,14 @@
 
 {% block content %}
 
-<h3 class="center-align">Register</h3>
+<h1 class="center-align">Register</h1>
 
 <div class="row ">
-    <form class="col s10 m12 offset-m2" method="POST" action="{{ url_for('signup') }}">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('signup') }}">
         <div class="card-panel">
             <!-- username -->
-            <div class="row">
-                <div class="input-field col s12">
+            <div class="row signup">
+                <div class="input-field mx-auto col-10 col-md-8 col-lg-6">
                     <i class="fa-solid fa-right-to-bracket"></i>
                     <input id="username" name="username" type="text" minlength="5"
                         maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
@@ -17,8 +17,8 @@
                 </div>
             </div>
             <!-- passowrd -->
-            <div class="row">
-                <div class="input-field col s12">
+            <div class="row signup">
+                <div class="input-field mx-auto col-10 col-md-8 col-lg-6">
                     <i class="fa-solid fa-lock"></i>
                     <input id="password" name="password" type="password" minlength="5"
                         maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
@@ -26,8 +26,8 @@
                 </div>
             </div>
             <!-- register -->
-            <div class="row">
-                <button type="submit" class="col s12 btn-large">
+            <div class="row signup">
+                <button type="submit" class="col s12 btn-large btn">
                     Sign Up <i class="fas fa-sign-in-alt"></i>
                 </button>
             </div>

@@ -56,6 +56,7 @@ h1 {
 
 .signin {
     padding: 3%;
+    text-align: center;
 }
 
 
@@ -83,6 +84,7 @@ h1 {
 
 .view{
     background-color: #f96d00;
+    margin-bottom: 10%;
 }
 
 .card-img-top {
@@ -98,4 +100,22 @@ h1 {
 
 .add {
     margin-bottom: 15% ;
+}
+
+
+.img-view {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.view-text {
+    text-align: center;
+}
+
+.signup {
+    padding: 3%;
+    text-align:center;
+
 }
