@@ -87,11 +87,11 @@
             <p>METHOD: {{ recipe.recipe_method }}</p>
         </div>
         <div class="ms-lg-4 p-3 p-md-4">
-            <p>CATEGORY: {{ recipe.category_id }}</p>
+            <p>CATEGORY: {{ recipe.category.category_name }}</p>
         </div>
         <div class="ms-lg-4 p-3 p-md-4">
             <a href="{{ url_for('home') }}" class="btn btn-primary">Close</a>
-            <a href="{{ url_for('edit_recipe', recipe_id=recipe.id)}}" class="btn btn-primary edit">Edit Recipe</a>
+            <a href="{{ url_for('edit_recipe', recipe_id=recipe.id)}}" class="btn btn-primary edit-view">Edit Recipe</a>
         </div>
 
     </div>

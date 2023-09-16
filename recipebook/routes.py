@@ -67,7 +67,7 @@ def add_recipe():
         )
         exists = list(Recipe.query.filter_by(recipe_name=request.form.get("recipe_name", '')))
         if len(exists) > 0:
-            flash("This Categeory name already exists")
+            flash("This Recipe name already exists")
         else:
             db.session.add(recipe)
             db.session.commit()
@@ -80,15 +80,19 @@ def edit_recipe(recipe_id):
     recipe = Recipe.query.get_or_404(recipe_id)
     categories = list(Category.query.order_by(Category.category_name).all())
     if request.method == "POST":
-        recipe.recipe_name = request.form.get("recipe_name")
         recipe.recipe_description = request.form.get("recipe_description")
         recipe.recipe_ingredients = request.form.get("recipe_ingredients")
         recipe.recipe_method = request.form.get("recipe_method")
         recipe.recipe_time = request.form.get("recipe_time")
         recipe_image = request.form.get("recipe_image")
         recipe.category_id = request.form.get("category_id")
-        db.session.commit()
-        return redirect(url_for("home"))
+        exists = list(Recipe.query.filter_by(recipe_name=request.form.get("recipe_name", '')))
+        if len(exists) > 0:
+            flash("This Recipe name already exists")
+        else:
+            recipe.recipe_name = request.form.get("recipe_name")
+            db.session.commit()
+            return redirect(url_for("home"))
     return render_template("edit_recipe.html", recipe=recipe, categories=categories)
 
 

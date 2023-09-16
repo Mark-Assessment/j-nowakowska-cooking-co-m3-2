@@ -76,10 +76,13 @@ h1 {
 
 .delete{
     background-color: #A31300;
+    margin-bottom: 10%;
 }
 
 .edit{
     background-color: darkgreen;
+    margin-bottom: 10%;
+    margin-left: 10%;
 }
 
 .view{
@@ -117,5 +120,16 @@ h1 {
 .signup {
     padding: 3%;
     text-align:center;
+}
 
+.nav-img {
+    margin-top: 5%;
+}
+
+.edit-view {
+    background-color: darkgreen;
+}
+
+.edit-cat {
+    background-color: darkgreen;
 }
