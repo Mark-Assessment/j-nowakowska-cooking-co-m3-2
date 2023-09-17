@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/fecc4c41c4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
-    <link rel="icon" type="image/png" href="favicon_io_1/favicon.ico">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon_io_1/favicon.ico') }}">
 
 </head>
 <body>
@@ -24,7 +24,7 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <img src="workspaces/Milestone-3/recipebook/static/images/food-logo.png" width="350" alt="veg logo"> 
+          <img src="{{ url_for('static', filename='images/food-logo.png') }}" width="150" alt="veg logo"> 
           <a class="navbar-brand" href="{{ url_for('home')}}">Julia's Cooking Company</a>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
