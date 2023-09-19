@@ -14,11 +14,9 @@ main{
 }
 
 .navbar {
-    padding: 10vh;
+    padding: 5vh;
 
 }
-
-
 
 
 footer {
@@ -30,7 +28,7 @@ footer {
 
 footer>a {
     font-size: 20px;
-    color: #eb2632;
+    color: #f96d00;
     padding: 5px 10px;
     text-decoration: none;
     font-size: 30px;
@@ -39,19 +37,19 @@ footer>a {
 
 footer>p {
     color: #000000;
-    font-family: font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     padding: 10px;
 }
 
 
 h3 {
-    padding: 10%;
+    padding: 5%;
     position: relative;
     text-align: center;
 }
 
 h1 {
-    padding: 10%;
+    padding-top: 5%;
     position: relative;
     text-align: center;
 }
@@ -65,6 +63,7 @@ h1 {
 .btn {
     background-color:#f96d00;
     border-color: #000000;
+    margin: 4% 0 0 4%;
 }
 
 .btn:hover {
@@ -77,19 +76,18 @@ h1 {
 }
 
 .delete{
-    background-color: #A31300;
+    background-color: #c13131;
     margin-bottom: 10%;
 }
 
 .edit{
-    background-color: darkgreen;
-    margin-bottom: 10%;
-    margin-left: 10%;
+    background-color: #295f4e;
+    
 }
 
 .view{
     background-color: #f96d00;
-    margin-bottom: 10%;
+   
 }
 
 .card-img-top {
@@ -129,9 +127,36 @@ h1 {
 }
 
 .edit-view {
-    background-color: darkgreen;
+    background-color: #295f4e;
 }
 
 .edit-cat {
-    background-color: darkgreen;
+    background-color: #295f4e;
+}
+
+.edit-rec {
+    background-color: #295f4e;
+}
+
+.logo {
+    margin: 0 5% 0 5%;
+}
+
+.add {
+    background-color: #f96d00;
+    margin-top: 10%;
+}
+
+.row {
+    margin:5%;
+}
+
+/* --------media queries tablet----------*/
+@media screen and (max-width: 1400px){
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
 }
