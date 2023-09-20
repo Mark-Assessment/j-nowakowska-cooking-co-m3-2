@@ -15,10 +15,10 @@
 
 <div class="row">
     {% for recipe in recipies %}
-    <div class="col-3 row-cols-4 row-cols-md-1 g-6">
+    <div class="col-3 row-cols-4 row-cols-md-1 g-6 recipe-card">
         <img src="{{ recipe.recipe_image }}" class="card-img-top" alt="{{ recipe.recipe_name }}"
         onerror="this.src='recipebook/static/images/recipe-placeholder.jpg'">
-        <div class="card-body">
+        <div class="card-body recipe-card">
                 <h5 class="card-title">{{ recipe.recipe_name }}</h5>
                 <p class="card-text time">{{ recipe.recipe_time }}</p>
                 <p class="card-text recipe-body">{{ recipe.recipe_description }}</p>
