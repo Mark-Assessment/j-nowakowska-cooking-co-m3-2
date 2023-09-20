@@ -7,41 +7,41 @@
     <form class="" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe.id) }}">
         <!-- name of the recipe  -->
         <div class="row">
-            <div class="input-field d-grid gap-2 col-6 mx-auto">
+            <div class="input-field d-grid gap-2 col-10 mx-auto">
                 <label for="recipe_name">Recipe Name</label>
                 <input id="recipe_name" name="recipe_name" value="{{ recipe.recipe_name }}" minlength="3" maxlength="60" type="text" class="validate" required>
             </div>
         </div>
          <!-- description of the recipe  -->
          <div class="row">
-            <div class="input-field d-grid gap-2 col-6 mx-auto">
+            <div class="input-field d-grid gap-2 col-10 mx-auto">
                 <label for="recipe_description">Recipe Description</label>
                 <textarea id="recipe_description" name="recipe_description" minlength="3" maxlength="1000" type="text" class="validate" required>{{ recipe.recipe_description }}</textarea>
             </div>
         </div>
         <!-- ingredients for the recipe  -->
         <div class="row">
-            <div class="input-field d-grid gap-2 col-6 mx-auto">
+            <div class="input-field d-grid gap-2 col-10 mx-auto">
                 <label for="recipe_ingredients">Recipe Ingredients</label>
                 <textarea id="recipe_ingredients" name="recipe_ingredients" minlength="3" maxlength="1000" type="text" class="validate" required>{{ recipe.recipe_ingredients }}</textarea>
             </div>
         </div>
         <!--  Recipe method  -->
         <div class="row">
-            <div class="input-field d-grid gap-2 col-6 mx-auto">
+            <div class="input-field d-grid gap-2 col-10 mx-auto">
                 <label for="recipe_method">Recipe Method</label>
                 <textarea id="recipe_method" name="recipe_method" minlength="3" maxlength="1000" type="text" class="validate" required>{{ recipe.recipe_method }}</textarea>
             </div>
         </div>
         <!--  Recipe time -->
         <div class="row">
-            <div class="input-field d-grid gap-2 col-6 mx-auto">
+            <div class="input-field d-grid gap-2 col-10 mx-auto">
                 <label for="recipe_time">Recipe Time</label>
                 <input id="recipe_time" name="recipe_time" type="text" value=" {{ recipe.recipe_time }} " class="validate" required>
             </div>
         </div>
         <div class="row">
-            <div class="input-field d-grid gap-2 col-6 mx-auto">
+            <div class="input-field d-grid gap-2 col-10 mx-auto">
                 <label for="recipe_image" class="form-label">
                  Recipe's Image (Url / Image's address)
                 </label>
@@ -57,7 +57,7 @@
         </div>
         <!-- Category ID-->
         <div class="row">
-            <div class="input-field d-grid gap-2 col-6 mx-auto">
+            <div class="input-field d-grid gap-2 col-10 mx-auto">
                 <label for="category_id">Category</label>
                 
                 <select id="category_id" name="category_id" class="validate" class="form-select" aria-label="Default select example" required>

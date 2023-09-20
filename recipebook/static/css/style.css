@@ -159,4 +159,73 @@ h1 {
         border: 0;
     }
 
+    .btn{
+        font-size: 70%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .row{
+        font-size: 10px;
+    }
+
+
+
+}
+
+/* --------media queries phone----------*/
+@media screen and (max-width: 1200px){
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    .btn{
+        font-size: 50%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-img {
+        width: 80%;
+    }
+
+    .recipe-body{
+        display: none;
+    }
+
+    .row{
+        font-size: 20px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    h5 {
+        font-size: 10px;
+    }
+
+    .time{
+        display: none;
+    }
+
+    
+
+
+
+}
+
+
+/* --------media queries  small phone----------*/
+@media screen and (max-width: 600px){
+    .row {
+        position: relative;
+        display: flex;
+    }
 }
