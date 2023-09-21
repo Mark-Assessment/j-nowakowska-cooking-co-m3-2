@@ -182,7 +182,7 @@ Manual testing was conducted on the following elements of the [Add a Recipe Page
 
 - Submit Button takes the User back to the main page and uploads the recipe to the database, visible on the main page.
 <p>
-  <img src="" width="100%" alt="prompt to fill the required field">
+  <img src="recipebook/static/images/main-page.png" width="100%" alt="prompt to fill the required field">
 </p>
 
 ## Automated Testing
@@ -225,19 +225,13 @@ The [Extends Class](https://extendsclass.com/) service was used to validate Pyth
 - Chrome
 
 <p>
-  <img src="" width="100%" alt="chrome test">
-</p>
-
-- Firefox
-
-<p>
-  <img src="" width="100%" alt="firefox test">
+  <img src="recipebook/static/images/chrome.png" width="100%" alt="chrome test">
 </p>
 
 - Safari
 
 <p>
-  <img src="" width="100%" alt="safari test">
+  <img src="recipebook/static/images/safari.png" width="100%" alt="safari test">
 </p>
 
 ## User testing
