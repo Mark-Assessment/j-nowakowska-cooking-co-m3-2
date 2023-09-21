@@ -84,7 +84,7 @@ def edit_recipe(recipe_id):
         recipe.recipe_ingredients = request.form.get("recipe_ingredients")
         recipe.recipe_method = request.form.get("recipe_method")
         recipe.recipe_time = request.form.get("recipe_time")
-        recipe_image = request.form.get("recipe_image")
+        recipe.recipe_image = request.form.get("recipe_image")
         recipe.category_id = request.form.get("category_id")
         exists = list(Recipe.query.filter_by(recipe_name=request.form.get("recipe_name", '')))
         if len(exists) > 0:

@@ -149,8 +149,13 @@ h1 {
 
 .row {
     margin:5%;
+    display:flex;
 }
 
+.view-text {
+    white-space:pre;
+    text-wrap: wrap;
+}
 
 
 /* --------media queries tablet----------*/
@@ -237,6 +242,18 @@ h1 {
     h5{
         font-size: 20px;
         text-align: center;
+    }
+
+    .category-card{
+        display: inline-block;
+        margin: 0 auto;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .cat-img {
+        display: none;
     }
 
 
