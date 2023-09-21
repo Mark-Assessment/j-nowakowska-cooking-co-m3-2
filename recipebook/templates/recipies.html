@@ -3,6 +3,7 @@
 
 <h1>Recipes</h1>
 
+<!--Main Button to add recipes-->
 <div class="row">
     {% if session.user %}
     <div class="d-grid gap-2 col-6 mx-auto">
@@ -12,7 +13,7 @@
     </div>
     {% endif %}
 </div>
-
+<!---recipe card-->
 <div class="row">
     {% for recipe in recipies %}
     <div class="col-3 row-cols-4 row-cols-md-1 g-6 recipe-card">
@@ -31,15 +32,18 @@
                 </div>
                 {% endif %}
         </div>
+        <!---modal for delete button-->
         <div id="modal-{{ recipe.id }}" class="modal">
             <div class="modal-content">
                 <div class="modal-header">
+                    <!---gives user a choice to delete the record or close window -->
                     <h5 class="modal-title">Are you certain you want to delete this Recipe?</h5>
                 </div>
                 <div class="modal-body">
                     <p>This will permanently delete the record.</p>
                 </div>
                 <div class="modal-footer">
+                    <!---buttons for the modal-->
                       <a href="{{ url_for('delete_recipe', recipe_id=recipe.id) }}" class="btn btn-primary">Delete</a>
                       <a href="{{ url_for('home') }}" class="btn btn-primary">Close</a>
                 </div>

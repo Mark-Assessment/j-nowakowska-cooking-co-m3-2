@@ -14,12 +14,14 @@ def categories():
     categories = list(Category.query.order_by(Category.category_name).all())
     return render_template("categories.html", categories=categories)
 
-
+# allows user to add category
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
     if request.method == "POST":
+        # checks if category name already exists
         exists = list(Category.query.filter_by(category_name=request.form.get("category_name", '')))
         if len(exists) > 0:
+            # flash message if category name already exists - page will reload
             flash("This Categeory name already exists")
         else:
             category = Category(category_name=request.form.get("category_name"))
@@ -28,13 +30,14 @@ def add_category():
             return redirect(url_for("categories"))
     return render_template("add_category.html")
 
-
+# allows user to edit category name
 @app.route("/edit_category/<int:category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
     category = Category.query.get_or_404(category_id)
     if request.method == "POST":
         exists = list(Category.query.filter_by(category_name=request.form.get("category_name", '')))
         if len(exists) > 0:
+            # message flash if category name alredy exists
             flash("This Categeory name already exists")
         else:
             category.category_name = request.form.get("category_name")
@@ -42,7 +45,7 @@ def edit_category(category_id):
             return redirect(url_for("categories"))
     return render_template("edit_category.html", category=category)
 
-
+# allows user to delete a category
 @app.route("/delete_category/<int:category_id>")
 def delete_category(category_id):
     category = Category.query.get_or_404(category_id)

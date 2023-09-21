@@ -18,7 +18,7 @@
 <body>
     
    <header>
-    <!-- Bootstrap responsive header-->
+    <!-- Bootstrap responsive header. Img not used as in other pages-->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,7 +62,7 @@
 
 
 
-    <h2></h2>
+    <h3>{{ recipe.recipe_name }}</h3>
 
     <div class="card mb-4" style="max-width: 100%;">
         <div class="row g-0">
@@ -89,7 +89,7 @@
         <div class="ms-lg-4 p-3 p-md-4">
             <p>CATEGORY: {{ recipe.category.category_name }}</p>
         </div>
-        <div class="ms-lg-4 p-3 p-md-4">
+        <div class="d-grid gap-2 col-6 mx-auto">
             <a href="{{ url_for('home') }}" class="btn btn-primary">Close</a>
             <a href="{{ url_for('edit_recipe', recipe_id=recipe.id)}}" class="btn btn-primary edit-view">Edit Recipe</a>
         </div>
@@ -97,6 +97,7 @@
     </div>
 
     {% endblock %}
+    <!--Allows flash messages to display on screen-->
     {% with messages=get_flashed_messages(with_categories=true) %}
     {% for category, message in messages %}
      <div class='alert alert-{{category}} text-center alert-dismissible fade show m-auto'>
@@ -107,6 +108,7 @@
 
 </main>
 
+<!---Responsive Footer--->
 <footer>
     <a href="https://www.facebook.com" target="_blank" rel="noopener"
         aria-label="Follow us on Facebook (link will open in a new tab)"><i class="fab fa-facebook"> </i></a>

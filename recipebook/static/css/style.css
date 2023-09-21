@@ -64,6 +64,7 @@ h1 {
     background-color:#f96d00;
     border-color: #000000;
     margin: 4% 0 0 4%;
+    justify-content: space-around;
 }
 
 .btn:hover {
