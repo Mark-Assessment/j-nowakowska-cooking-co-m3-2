@@ -51,7 +51,7 @@ def delete_category(category_id):
     return redirect(url_for("categories"))
 
 
-
+# allows user to add recipe also checks if recipe name already used
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     categories = list(Category.query.order_by(Category.category_name).all())
@@ -65,8 +65,10 @@ def add_recipe():
             recipe_image=request.form.get("recipe_image"),
             category_id=request.form.get("category_id")
         )
+        # user informed if recipe name already in use 
         exists = list(Recipe.query.filter_by(recipe_name=request.form.get("recipe_name", '')))
         if len(exists) > 0:
+            #message flashed and page reloaded if name already exists
             flash("This Recipe name already exists")
         else:
             db.session.add(recipe)
@@ -74,7 +76,7 @@ def add_recipe():
             return redirect(url_for("home"))
     return render_template("add_recipe.html", categories=categories)
 
-
+# allows user to edit recipes
 @app.route("/edit_recipe/<int:recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     recipe = Recipe.query.get_or_404(recipe_id)
@@ -96,7 +98,7 @@ def edit_recipe(recipe_id):
     return render_template("edit_recipe.html", recipe=recipe, categories=categories)
 
 
-
+# allows the user to delete recipe
 @app.route("/delete_recipe/<int:recipe_id>")
 def delete_recipe(recipe_id):
     recipe = Recipe.query.get_or_404(recipe_id)
@@ -104,7 +106,7 @@ def delete_recipe(recipe_id):
     db.session.commit()
     return redirect(url_for("home"))
 
-
+# sign in/ sign up and sign out code was adapted from code challanges from this course and stackoverflow
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
     if request.method == "POST":
@@ -178,7 +180,7 @@ def signout():
     session.pop("user")
     return redirect(url_for("signin"))
 
-
+# allows users to view recipes 
 @app.route("/view_recipe/<int:recipe_id>", methods=["GET"])
 def view_recipe(recipe_id):
     recipe = Recipe.query.get_or_404(recipe_id)
