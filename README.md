@@ -142,7 +142,7 @@ The information above was organized in a hierarchical tree structure, showing ho
 <summary>Structure of the Site</summary>
 
 <p>
-  <img src="" width="100%" alt="structure photos">
+  <img src="recipebook/static/images/skeleton.png" width="100%" alt="structure photos">
 </p>
 
 </details>
@@ -152,7 +152,7 @@ The structure of the models and database is included below :
 <summary>Structure of the Database</summary>
 
 <p>
-  <img src="" width="100%" alt="structure photos">
+  <img src="recipebook/static/images/models-structure.png" width="100%" alt="structure photos">
 </p>
 
 </details>
@@ -162,9 +162,8 @@ The structure of the models and database is included below :
 Wireframes were made to showcase the appearance of the site pages while keeping a positive user experience in mind. The wireframes were created using an online version of [Figma](https://www.figma.com).
 
 <p>
-    <img src="" width="100%" alt="">
-    <img src="" width="100%" alt="">
-    <img src="" width="100%" alt="">
+    <img src="recipebook/static/images/website-structure-1.png" width="100%" alt="website-vision">
+    <img src="recipebook/static/images/website-structure-2.png" width="100%" alt="website-vision">
 </p>
 
 </details>
@@ -177,17 +176,18 @@ Wireframes were made to showcase the appearance of the site pages while keeping 
 I have chosen my colour scheme by using [SheCodes](https://palettes.shecodes.io/) colour scheme palettes.
 The colours used are :
   
-#f6e4ad - soft yellow for background;
+#fafafa - soft grey for background;
 #000000 - black for text;
-#eb2632 - red for footer links;
+#c13131 - red for footer links;
 #f96d00 - orange button background colors;
 #f1ecc9 - pale green for button hover background colour;
-#A31300 - red for delete button;
-#darkgreen - green  for the edit button
-#bbf2ed -  light blue for view button;
+#c13131 - red for delete button;
+#295f4e - green  for the edit button
+#f96d00 -  orange for view button;
 
-The soft yellow was used as the background colour for the website.  
-The main content text is in a black shade, as this colour creates the best contrast to guarantee the high readability of the text. Following the standard procedure, the delete buttons are red; the edit buttons are green and the view buttons are yellow.
+
+The soft grey was used as the background colour for the website.  
+The main content text is in a black shade, as this colour creates the best contrast to guarantee the high readability of the text. Following the standard procedure, the delete buttons are red; the edit buttons are green and the view buttons are orange.
 Shades picked are generally soft with a few contrasting colours like red, orange and green.
 The colours are there to represent versatile colours of fruit and vegetables used in recipes.
 
@@ -234,7 +234,7 @@ It appears on all screen sizes. If the screen size becomes too small the menu wi
     </dd>
 </dl>
 <dl>
-    <dt><a href="categories.html" target="_blank alt=" Categories page">Categories Page</a></dt>
+    <dt><a href="categories.html" target="_blank" alt="Categories page">Categories Page</a></dt>
     <dd>
         The <em>Categories</em> is a scrollable page that includes cards with categories. It consists of an image and category name; The cards also have a button to edit and delete categories 
         <ul>
@@ -293,7 +293,7 @@ The developer ran into several issues during the development of this site. The m
 
 - HTML5
 - CSS3
--JavaScript
+- JavaScript
 - Python
 - Bootstrap
 - SQL 

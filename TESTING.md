@@ -9,7 +9,7 @@
    - The sign-in/sign is included in the navigation bar to make the user experience better 
    - Navigation bar adapts as the user is logging/registering for easy navigation
    - Website layout is easy to navigate.
-     <img src="" width="100%" alt=" Navigation bar with a sign-in/sign-up buttons visible ">
+     <img src="recipebook/static/images/signin-menu.png" width="100%" alt=" Navigation bar with a sign-in/sign-up buttons visible ">
 
 2. As a new user, navigate the site intuitively.
 
@@ -31,7 +31,7 @@ Edit/View/Delete Recipe buttons are visible under every recipe.
    - Users can log out after accessing the logout button in the navigation bar.
 
 2. As a returning player, I want the information I seek to be easily accessible, like recipe instructions.
-   <img src="" width="100%" alt="home content responsiveness test">
+   <img src="recipebook/static/images/recipe-cards.png" width="100%" alt="home content responsiveness test">
 
    - Recipes are situated on the main page.
    - Website layout is easy to navigate to view recipes button.
@@ -39,9 +39,9 @@ Edit/View/Delete Recipe buttons are visible under every recipe.
 
 3. As a returning player, I expect to function without errors.
 
-   - - The buttons on the website are all functional and labelled correctly.
+   - The buttons on the website are all functional and labelled correctly.
    - The navigation bar takes the user to the correct destination and is labelled correctly
-     <img src="" width="100%" alt="">
+     <img src="recipebook/static/images/nav-bar.png" width="100%" alt="nav-bar">
 
 #### Person with an interest in cooking :
 
@@ -51,7 +51,7 @@ Edit/View/Delete Recipe buttons are visible under every recipe.
    - The navigation bar is easily accessible and visible at the top of the page.
 
 2. As a person with an interest in cooking, I want to access a recipe site where I can share and edit recipes.
-   <img src="" width="100%" alt="">
+   <img src="recipebook/static/images/add-recipe-button-main.png" width="100%" alt="add recipe button">
 
    - Buttons for editing, deleting, viewing and adding recipes are visible and work correctly.
    - Uploaded recipes can be viewed on the main page 
@@ -73,17 +73,17 @@ Manual testing was conducted on the following elements that appear on every page
   website
 
 <p>
-  <img src="" width="100%" alt="nav-bar categories test">
-  <img src="" width="100%" alt="nav-bar add recipes">
-<img src="" width="100%" alt="nav-bar home">
+  <img src="recipebook/static/images/nav-bar.png" width="100%" alt="nav-bar">
+  <img src="recipebook/static/images/add-recipe-page.png" width="100%" alt="add recipes">
+<img src="recipebook/static/images/category-page.png" width="100%" alt="category page">
 </p>
 
 
 - Clicking on Sign in/ Sign up takes the user to the correct page
 
 <p>
-  <img src="" width="100%" alt="Sign in">
-  <img src="" width="100%" alt="Sign up">
+  <img src="recipebook/static/images/signin.png" width="100%" alt="Sign in">
+  <img src="recipebook/static/images/signout.png" width="100%" alt="Sign up">
 </p>
 
 - Clicking on the footer items to take the user to the correct page on the
@@ -94,7 +94,7 @@ Instagram
 LinkedIn
 
   <p>
-  <img src="" width="100%" alt=" social media test">
+  <img src="recipebook/static/images/footer.png" width="100%" alt=" social media test">
   </p>
 
 ### Home Page
@@ -103,40 +103,40 @@ Manual testing was conducted on the following elements of the [Home Page](recipi
 
 - The responsiveness of the page
 <p>
-  <img src="" width="100%" alt="home content responsiveness test">
-  <img src="" width="100%" alt="add recipe page responsiveness test">
-  <img src="" width="100%" alt="categories page rules responsiveness test">
+  <img src="recipebook/static/images/responsiveness-2.png" width="100%" alt="home content responsiveness test">
+  <img src="recipebook/static/images/add-respo.png" width="100%" alt="add recipe page responsiveness test">
+  <img src="recipebook/static/images/cat-respo.png" width="100%" alt="categories page rules responsiveness test">
 
 </p>
 
 - Buttons for CRUD functionality visible on the main page under every recipe (view, edit, delete)
 
  <p>
-  <img src="" width="100%" alt="CRUD buttons">
+  <img src="recipebook/static/images/recipe-cards.png" width="100%" alt="CRUD buttons">
 </p>
 
 - Add Recipe Button visible on the main page
 
  <p>
-  <img src="" width="100%" alt="Add Recipe button">
+  <img src="recipebook/static/images/add-recipe-button-main.png" width="100%" alt="Add Recipe button">
 </p>
 
 - Recipe Description, time it takes to prepare and category are visible under every recipe
 
 <p>
-  <img src="" width="100%" alt="Recipe description, time and category">
+  <img src="recipebook/static/images/recipe-cards.png" width="100%" alt="Recipe description, time and category">
 </p>
 
 - Buttons change background colours when hovered over
 
 <p>
-  <img src="" width="100%" alt=">
+  <img src="recipebook/static/images/btn-color-change.png" width="100%" alt=">
 </p>
 
 - The delete Recipe button comes up with a modal to give the user a choice to Cancel or Delete the Recipe permanently
 
 <p>
-  <img src="" width="100%" alt="The recipe delte modal">
+  <img src="recipebook/static/images/delete-modal.png" width="100%" alt="The recipe delte modal">
 </p>
 
 
@@ -146,17 +146,17 @@ Manual testing was conducted on the following elements of the [Category Page](ca
 
 - The responsiveness of the page
 <p>
-  <img src="" width="100%" alt="categories page responsiveness test">
+  <img src="recipebook/static/images/cat-respo.png" width="100%" alt="categories page responsiveness test">
 </p>
 
 - The add category button is working and taking the user to the correct page
 <p>
-  <img src="" width="100%" alt="categories add button">
+  <img src="recipebook/static/images/add-cat.png" width="100%" alt="categories add button">
 </p>
 
 - Delete category button is working and taking the user to a modal with Close or Delete options
 <p>
-  <img src="" width="100%" alt="categories delete modal">
+  <img src="recipebook/static/images/del-cat.png" width="100%" alt="categories delete modal">
 </p>
 
 
@@ -167,22 +167,17 @@ Manual testing was conducted on the following elements of the [Add a Recipe Page
 
 - The responsiveness of the page
 <p>
-  <img src="" width="100%" alt="add recipe responsiveness page">
+  <img src="recipebook/static/images/add-respo.png" width="100%" alt="add recipe responsiveness page">
 </p>
 
 - Form is available to fill
 <p>
-  <img src="" width="100%" alt="add recipe page form">
+  <img src="recipebook/static/images/form-add-rec.png" width="100%" alt="add recipe page form">
 </p>
 
 - If the recipe name submitted is the one that already exists then the page will reload and an alert come up
 <p>
-  <img src="" width="100%" alt="alert that name already exists">
-</p>
-
-- If the field on the form is empty a prompt will come up to fill it 
-<p>
-  <img src="" width="100%" alt="prompt to fill the required field">
+  <img src="recipebook/static/images/flash-alert.png" width="100%" alt="alert that name already exists">
 </p>
 
 - Submit Button takes the User back to the main page and uploads the recipe to the database, visible on the main page.
@@ -202,32 +197,26 @@ In a real-life scenario, I fully acknowledge I would use PyTest to further pract
 ### Code Validation
 
 The [W3C Markup Validator](https://validator.w3.org/) service was used to validate the `HTML` and `CSS` code used.
-The []() service was used to validate Python.
+The [Extends Class](https://extendsclass.com/) service was used to validate Python.
 
 **Results:**
 
-- Home Page
+- HTML Pages
 
 <p>
-  <img src="" width="100%" alt=" Home Page Validator">
-</p>
-
-- Category Page
-
-<p>
-  <img src="" width="100%" alt=" Category Page Validator">
-</p>
-
--Recipes Page
-
-<p>
-  <img src="" width="100%" alt=" Recipe Page Validation">
+  <img src="recipebook/static/images/html-validation.png" width="100%" alt=" HTML Validator">
 </p>
 
 - CSS
 
 <p>
-  <img src="" width="100%" alt="CSS Validator">
+  <img src="recipebook/static/images/css-validation.png" width="100%" alt="CSS Validator">
+</p>
+
+- Python
+
+<p>
+  <img src="recipebook/static/images/python-validation.png" width="100%" alt="Python Validator">
 </p>
 
 
