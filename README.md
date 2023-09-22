@@ -319,54 +319,22 @@ The developer ran into several issues during the development of this site. The m
 
 ### Deploying on Heroku
 
-There are two ways to deploy on Heroku:
-Using the Heroku Command Line Interface, or
-Connect to GitHub Repository.
-I did the second method as it's the simpler way to deploy to Heroku. The steps are as follows.
-Set Up A New Heroku App
-Navigate to Heroku.com, create a new account or log in if you already have an account.
-On the dashboard page, click the "Create New App" button.
-Give the app a name, the name must be unique with hyphens between words.
-Set the region closest to you, and click "Create App".
-Create A Requirements.txt file
-A requirements.txt file contains a list of the Python dependencies that our project needs to run successfully. It's how Heroku can detect what language we're using. Here are the steps to create a requirements.txt file:
-Create a requirements.txt file by typing in the terminal:
-pipi3 freeze --local > requirements.txt
-Add, commit, and push the file:
-git add -A
-git commit -m "Add requirements.txt" 
-git push
-
-Create A Procfile file
-A procfile is a special kind of file that tells Heroku how to run our project.
-In the terminal, type:
-echo web: python run.py > Procfile
-This command tells Heroku that it's going to be a web process, and the command to run our application is "python run.py", which is the name of the python file that we've created.
-Add, commit, and push the file:
-git add -A
-git commit -m "Add Procfile" 
-git push
-
-Connect Our App to Github
-In Heroku app dashboard, navigate to the Deploy page. On the Deployment Method, click "Github".
-Click on "Connect to Github" button.
-Fill in the name of your Github repository name and click on "Search".
-After it found the correct repository, click on "Connect".
-Set Up The Environment Variables in Heroku
-Since we've contained our environment variables within a hidden file env.py, Heroku won't be able to read those variables. We can securely tell Heroku which variables are required.
-Go back to Heroku dashboard of your flask app, navigate to the "Settings" page.
-Click on "Reveal Config Vars" button, add environment variables in a key-value pairs as below:KeyValue
-IP	0.0.0.0
-PORT	5000
-SECRET_KEY	<your_secret_key>
-MONGO_URI	mongodb+srv://<username>:<password>@<cluster_name>-ocous.mongodb.net/<database_name>?retryWrites=true&w=majority
-MONGO_DBNAME	<database_name>
-Enable The Automatic Deployment
-On "Automatic Deploys" section, from our master/main branch click on "Enable Automatic Deployment".
-On "Manual deploy" section, from our master/main click on "Deploy Branch".
-Heroku will now receive the code from Github and start building the app using our required packages. Once it's done, you'll see a notification "Your app was successfully deployed." The deployed version can now be viewed by selecting View App.
-eroku
-
+Generate the requirements.txt file with the following command in the terminal. After you run this command a new file called requirements.txt should appear in your root directory
+ pip freeze --local > requirements.txt
+Heroku requires a Procfile containing a command to run your program. Inside the root directory of your project create the new file. It must be called Procfile with a capital P, otherwise Heroku won’t recognise it
+Inside the file, add the following command web: python run.py
+Ensure you do not add a blank line to the end of the file as this can cause problems for deployment.
+Open your __init__.py file
+Add an if statement before the line setting the SLQALCHEMY_DATABASE_URI and, in the else, set the value to reference a new variable, DATABASE_URL.
+ app = Flask(__name__)
+ app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
+ if os.environ.get("DEVELOPMENT") == "True": app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_URL") else app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL")
+To ensure that SQLAlchemy can also read our external database, its URL needs to start with “postgresql://”, but we should not change this in the environment variable. Instead, we’ll make an addition to our else statement from the previous step to adjust our DATABASE_URL in case it starts with postgres://:
+ if os.environ.get("DEVELOPMENT") == "True": app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_URL")
+else:
+ uri = os.environ.get("DATABASE_URL")
+if uri.startswith("postgres://"): uri = uri.replace("postgres://", "postgresql://", app.config["SQLALCHEMY_DATABASE_URI"] = uri
+Save all your files and then add, commit and push your changes to GitHub
 ## Credits
 
 ### Content
