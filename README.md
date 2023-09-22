@@ -1,11 +1,11 @@
 # Julia's Cooking Company
 
 <p>
-  <img src="" width="100%" alt="mock up photos">
+  <img src="recipebook/static/images/am-i-responsive.png" width="100%" alt="mock up photos">
 </p>
 
 [Click here to view the live project]
-()
+(https://julias-recipe-book-b02aaf5bf9b3.herokuapp.com)
 
 ## Table of contents
 
