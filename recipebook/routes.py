@@ -71,7 +71,7 @@ def add_recipe():
         # user informed if recipe name already in use 
         exists = list(Recipe.query.filter_by(recipe_name=request.form.get("recipe_name", '')))
         if len(exists) > 0:
-            #message flashed and page reloaded if name already exists
+        #message flashed and page reloaded if name already exists
             flash("This Recipe name already exists")
         else:
             db.session.add(recipe)
