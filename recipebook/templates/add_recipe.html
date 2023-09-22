@@ -46,14 +46,14 @@
                  Recipe's Image (Url / Image's address)
                 </label>
                 <input type="text" id="recipe-image" class="form-control image-url" 
-                name="recipe_image" value="{{recipe_image}} required">
+                name="recipe_image" value="{{recipe_image}}" required>
             </div>
         </div>
         <!-- Rendering image from url
         Code for this was adapted from StackOverflow pages and tutor support -->
         <div class="row">
-            <img class="show-image" alt="display the image" 
-                onerror="this.src='static/images/recipe-placeholder.png';"
+            <img class="" alt="" 
+                onerror="this.src='../../static/images/recipe-placeholder.png';"
                 src="{{ url_for('static', filename='images/recipe-placeholder.png') }}">
         </div>
         <!-- Category ID-->
@@ -71,9 +71,10 @@
         <!-- the submit button -->
         <div class="row">
             <div class="d-grid gap-2 col-6 mx-auto">
-                <button type="submit" class="add">
+                <button type="submit" class="btn add">
                     Add Recipe 
                 </button>
+                <a href="{{ url_for('home') }}" class="btn close">Cancel</a>
             </div>
         </div>
     </form>

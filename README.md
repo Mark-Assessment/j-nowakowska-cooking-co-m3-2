@@ -198,8 +198,10 @@ The typography pairing used on this site is [Montserrat]. A backup of Sans-Serif
 #### Imagery
 
 The selected imagery has been sourced from various sites. 
-There is an image on the main page that also shows on other pages. A user can also use any URL of an image to include this in their recipe page.
+There is an image on the main page that also shows on other pages.
+A user can also use any URL of any image to include this in their recipe page.
 Categories have a default image included in the images folder.
+Browser logo was created by the author of the website using canva.
 
 ## Features
 
@@ -278,14 +280,14 @@ It appears on all screen sizes. If the screen size becomes too small the menu wi
 
 ## Issues and Bugs
 
-The developer ran into several issues during the development of this site. The most interesting ones have been described below, this includes the fix for the bug.
+The developer ran into several issues during the development of this site. The most interesting ones have been described below, this includes the fix for the bugs.
 
-**Adding images to page** - A bug was detected whilst the developer was testing the site and tried to add images. The models for the database needed to be changed but the website came up with few errors. Eventually, with the help of a tutor, the developer managed to update the data models correctly whilst adding the it to run.py file as well. 
+**Adding images to page** - A bug was detected whilst the developer was testing the site and tried to add images. The models for the database needed to be changed but the website came up with few errors. Eventually, with the help of a tutor, the developer managed to update the data models correctly. The models were updated to add image value and then the form updated to enable the user to add images. The images are now able to be generated from URLs.
 
 
-**View Categories** - 
+**View Recipe** - The view recipe option vame up with few errors during development of the page. The error referred to the routes.py file where the page was not correctly connected and recipes could not be viewed. The recipe had to be connected correctly and routes changed to reflect GET method. The database itself also had to be updaed with new models. 
 
-**Delete button** - Upon creating the delete button the developer realised that it did not trigger the desired behaviour. The button was supposed to warn the user before actually deleting a record but it didn't. The developer had to add a modal which then was included in the functionality of the button. 
+**Delete button** - Upon creating the delete button the developer realised that it did not trigger the desired behaviour. The button was supposed to warn the user before actually deleting a record but it didn't. The developer had to add a modal which then was included in the functionality of the button. Then the developer added Close and Delete button for the user, to confirm which action they would like to proceed with.
 
 ## Technologies Used
 
@@ -384,6 +386,6 @@ eroku
 
 ## Acknowledgements
 
-- I would like to thank my mentor Owonikoko Oluwaseun for useful advice and guidabce on this project.
+- I would like to thank my mentor Owonikoko Oluwaseun for useful advice and guidance on this project.
 - I would also like to thank the coders' community who created various documents explaining how Python and SQL work, so I could use that as a base to create my own, unique project.
 - I would like to thank my family and friends for their objective feedback and support.
