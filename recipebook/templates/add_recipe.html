@@ -43,7 +43,7 @@
         <!--  Recipe image -->
         
         <div class="input-field d-grid gap-2 col-10 mx-auto">
-            <label for="recipe_image" class="form-label">
+            <label for="recipe-image" class="form-label">
             Recipe's Image (Url / Image's address)
             </label>
             <input type="text" id="recipe-image" class="form-control image-url" 
@@ -53,7 +53,7 @@
         <!-- Rendering image from url
         Code for this was adapted from StackOverflow pages and tutor support -->
         <div class="row">
-            <img class="show-image" alt="image" 
+            <img class="show-image img-rec" alt="image" 
                 onerror="this.src='../../static/images/recipe-placeholder.jpg';"
                 src="{{ url_for('static', filename='images/recipe-placeholder.jpg') }}">
         </div>

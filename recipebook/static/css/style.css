@@ -158,6 +158,10 @@ h1 {
     text-wrap: wrap;
 }
 
+.img-rec {
+    display:none;
+}
+
 
 /* --------media queries tablet----------*/
 @media screen and (max-width: 1400px){
