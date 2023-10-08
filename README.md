@@ -152,7 +152,7 @@ The structure of the models and database is included below :
 <summary>Structure of the Database</summary>
 
 <p>
-  <img src="recipebook/static/images/models-structure.png" width="100%" alt="structure photos">
+  <img src="recipebook/static/images/updated-structure.png" width="100%" alt="structure photos">
 </p>
 
 </details>
