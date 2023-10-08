@@ -237,3 +237,7 @@ The [Extends Class](https://extendsclass.com/) service was used to validate Pyth
 ## User testing
 
 A few friends and family members were asked to review the page for user experience and to point out any bugs/issues. The input of this group led to small UX adjustments to improve the overall site appearance and user experience. Some of them included: Adding a Close button to the Delete modal, Adding color changes to buttons and graphics adjustments.
+DEBUG function was turned off.
+<p>
+  <img src="recipebook/static/images/debug-proof.png" width="100%" alt="debug proof">
+</p>
